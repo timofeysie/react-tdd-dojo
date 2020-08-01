@@ -1,6 +1,6 @@
 # React TDD dojo
 
-This is an exercise app to practice TDD with React using TypeScipt.
+This is an exercise app to practice TDD with React using TypeScript.
 
 The master and develop branches have the basic starting point generated with create-react-app.  The exercises will have their own branches.
 
