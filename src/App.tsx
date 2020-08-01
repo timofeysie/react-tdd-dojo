@@ -4,6 +4,9 @@ import "./App.css";
 function App() {
   const [displayOutput, setDisplayMessage] = React.useState(false);
   const [input, setOutput] = React.useState("");
+  const anagrams = (word: string) => {
+    return "ab ba";
+  };
   return (
     <div className="App">
       <label htmlFor="name" className="item padding">
@@ -18,7 +21,7 @@ function App() {
       <button onClick={() => setDisplayMessage(true)} className="padding">
         Submit
       </button>
-      {displayOutput && <p className="item">{input}</p>}
+      {displayOutput && <p className="item">{anagrams(input)}</p>}
     </div>
   );
 }
