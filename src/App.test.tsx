@@ -1,9 +1,14 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { renderHook, act } from "@testing-library/react";
+import { useAnagrams } from "./useAnagrams";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("useAnagrams hook", () => {
+   it("checking state updates", () => {
+     const { result } = renderHook(() => useAnagrams(""));
+     const [ anagram, updateAnagram ] = result.current;
+     expect(result.current.values().next().value).toBe("");
+     act(() => {
+       updateAnagram("ab");
+     });
+     expect(result.current.values().next().value).toBe("ab ba");
+   });
 });
