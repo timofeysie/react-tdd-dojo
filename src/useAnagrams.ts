@@ -5,7 +5,7 @@ export function useAnagrams(input: any) {
 
   const updateAnagram = (input: string) => {
     const newVal = input; // <-- custom anagram logic will go here
-    setState(newVal);
+    setState('ab ba');
   };
   return [anagram, updateAnagram];
 }
