@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { useAnagrams } from "./useAnagrams";
+import useAnagrams from "./useAnagrams";
 
 function App() {
   const [displayOutput, setDisplayMessage] = React.useState(false);

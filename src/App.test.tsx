@@ -1,5 +1,5 @@
 import { renderHook, act } from "@testing-library/react";
-import { useAnagrams } from "./useAnagrams";
+import useAnagrams from "./useAnagrams";
 
 describe("useAnagrams hook", () => {
   it("checking state updates", () => {

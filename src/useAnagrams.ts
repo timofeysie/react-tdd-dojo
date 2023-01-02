@@ -30,7 +30,7 @@ function generateAnagrams(input: string) {
   return anagrams;
 }
 
-export function useAnagrams(input: any) {
+export default function useAnagrams(input: any) {
   const [anagram, setState] = useState(input);
 
   const updateAnagram = (input: string) => {
